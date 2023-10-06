@@ -1,3 +1,3 @@
-SARATOGA_HOME = ../../..
+RANGER_HOME = ../../..
 
-include $(SARATOGA_HOME)/sw/common/saratoga.mk
+include $(RANGER_HOME)/sw/common/ranger.mk

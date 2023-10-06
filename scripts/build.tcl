@@ -84,4 +84,4 @@ report_power -file post_route_power.rpt
 report_drc -file post_imp_drc.rpt
 
 # Make bitstream
-write_bitstream -force saratoga.bit
+write_bitstream -force ranger.bit

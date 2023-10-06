@@ -11,7 +11,7 @@ A typical 5-stage pipeline is implemented.
 5. Write Back
 
 ![Pipeline\label{pipeline}](./figures/Pipeline.drawio.svg) \
-**Figure 1.** Saratoga Pipeline
+**Figure 1.** Ranger Pipeline
 
 <br>
 

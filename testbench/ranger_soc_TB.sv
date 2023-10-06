@@ -3,7 +3,7 @@
 `timescale 1ns/1ps
 
 
-module saratoga_soc_TB;
+module ranger_soc_TB;
 
     localparam MAX_CYCLES = 256;
     integer clk_count = 0;
@@ -22,7 +22,7 @@ module saratoga_soc_TB;
 
 
     // Instantiate DUT
-    saratoga_soc DUT (
+    ranger_soc DUT (
         .clk,
         .rst,
         .io_pins
@@ -40,9 +40,9 @@ module saratoga_soc_TB;
         #200;
         rst <= 0;
 
-        fid = $fopen("saratoga_soc.log");
-        $dumpfile("saratoga_soc.vcd");
-        $dumpvars(4, saratoga_soc_TB);
+        fid = $fopen("ranger_soc.log");
+        $dumpfile("ranger_soc.vcd");
+        $dumpvars(4, ranger_soc_TB);
     end
 
 

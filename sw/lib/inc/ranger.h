@@ -1,5 +1,5 @@
-#ifndef __SARATOGA_H
-#define __SARATOGA_H
+#ifndef __RANGER_H
+#define __RANGER_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -41,4 +41,4 @@ inline void wfi() { asm volatile inline ("wfi"); }
 }
 #endif
 
-#endif //__SARATOGA_H
+#endif //__RANGER_H

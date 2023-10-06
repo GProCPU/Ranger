@@ -1,9 +1,9 @@
 `timescale 1ns/1ps
 
 `include "rv32.sv"
-`include "saratoga.sv"
+`include "ranger.sv"
 import rv32::CSR_ADDR;
-import saratoga::*;
+import ranger::*;
 
 
 module csr #(

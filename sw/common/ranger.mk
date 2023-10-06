@@ -9,29 +9,29 @@ RISCV_PREFIX ?= riscv32-unknown-elf-
 MARCH ?= rv32i_zicsr
 MABI  ?= ilp32
 
-SARATOGA_HOME ?= ../../..
+RANGER_HOME ?= ../../..
 
 
 # --------------------------------------------------
-# Saratoga software framework
+# Ranger software framework
 # --------------------------------------------------
 # Linker script and startup file
-SARATOGA_COM_PATH = $(SARATOGA_HOME)/sw/common
+RANGER_COM_PATH = $(RANGER_HOME)/sw/common
 # Main library include files
-SARATOGA_INC_PATH = $(SARATOGA_HOME)/sw/lib/inc
+RANGER_INC_PATH = $(RANGER_HOME)/sw/lib/inc
 # Main library source files
-SARATOGA_SRC_PATH = $(SARATOGA_HOME)/sw/lib/src
+RANGER_SRC_PATH = $(RANGER_HOME)/sw/lib/src
 
 
 # Core libraries
-CORE_SRC  = $(wildcard $(SARATOGA_SRC_PATH)/*.c) $(wildcard $(SARATOGA_SRC_PATH)/*.cpp)
+CORE_SRC  = $(wildcard $(RANGER_SRC_PATH)/*.c) $(wildcard $(RANGER_SRC_PATH)/*.cpp)
 # Start-up code
-CORE_SRC += $(SARATOGA_COM_PATH)/startup_saratoga.S
+CORE_SRC += $(RANGER_COM_PATH)/startup_ranger.S
 
 # Linker script
-LD_SCRIPT ?= $(SARATOGA_COM_PATH)/saratoga.ld
+LD_SCRIPT ?= $(RANGER_COM_PATH)/ranger.ld
 # MakeHex script
-MAKE_HEX ?= $(SARATOGA_HOME)/scripts/makehex.py
+MAKE_HEX ?= $(RANGER_HOME)/scripts/makehex.py
 
 # Main output files
 APP_ELF = main.elf
@@ -71,8 +71,8 @@ DUMP_OPTS ?= --visualize-jumps -Mnumeric,no-aliases
 
 
 # Macros
-ifdef SARATOGA_SIM
-CC_OPTS += -DSARATOGA_SIM
+ifdef RANGER_SIM
+CC_OPTS += -DRANGER_SIM
 endif
 
 
@@ -88,16 +88,16 @@ clean:
 # Compile
 %.s.o: %.s
 	@echo "Compiling $<"
-	@$(CC) -c $(CC_OPTS) -I $(SARATOGA_INC_PATH) $< -o $@
+	@$(CC) -c $(CC_OPTS) -I $(RANGER_INC_PATH) $< -o $@
 %.S.o: %.S
 	@echo "Compiling $<"
-	@$(CC) -c $(CC_OPTS) -I $(SARATOGA_INC_PATH) $< -o $@
+	@$(CC) -c $(CC_OPTS) -I $(RANGER_INC_PATH) $< -o $@
 %.c.o: %.c
 	@echo "Compiling $<"
-	@$(CC) -c $(CC_OPTS) -I $(SARATOGA_INC_PATH) $< -o $@
+	@$(CC) -c $(CC_OPTS) -I $(RANGER_INC_PATH) $< -o $@
 %.cpp.o: %.cpp
 	@echo "Compiling $<"
-	@$(CC) -c $(CC_OPTS) -I $(SARATOGA_INC_PATH) $< -o $@
+	@$(CC) -c $(CC_OPTS) -I $(RANGER_INC_PATH) $< -o $@
 
 # Link
 $(APP_ELF): $(OBJ)

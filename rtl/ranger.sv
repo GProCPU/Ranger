@@ -1,10 +1,10 @@
-`ifndef __SARATOGA_SV
-`define __SARATOGA_SV
+`ifndef __RANGER_SV
+`define __RANGER_SV
 
 `include "rv32.sv"
 
 
-package saratoga;
+package ranger;
 
     localparam DEFAULT_CLK_PERIOD       = 10.0;             // core clock period in ns
 
@@ -121,4 +121,4 @@ package saratoga;
 
 endpackage
 
-`endif //__SARATOGA_SV
+`endif //__RANGER_SV

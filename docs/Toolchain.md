@@ -82,7 +82,7 @@ It will print something like `/opt/riscv/bin/riscv64-unknown-elf-gcc` if it was 
 
 ## Building a Project
 
-Compiling for the GPro 2 (Saratoga) requires the either a new version of gcc with support for RISC-V or the previous installation step to be completed.
+Compiling for the GPro 2 (Ranger) requires the either a new version of gcc with support for RISC-V or the previous installation step to be completed.
 After the toolchain has been installed, projects can be compiled using a Makefile.
 
 ### Platform Files
@@ -90,9 +90,9 @@ After the toolchain has been installed, projects can be compiled using a Makefil
 The compile process relies on several key files platform files.
 These files are located in the `sw/common` directory.
 
-- `startup_saratoga.S` This assembly files contains startup code for Saratoga.
-- `saratoga.ld` This is the linker script that tells the compiler how to organize machine code and data for Saratoga's memory layout.
-- `saratoga.mk` This is the base Makefile required to be included in all Saratoga project Makefile's.
+- `startup_ranger.S` This assembly files contains startup code for Ranger.
+- `ranger.ld` This is the linker script that tells the compiler how to organize machine code and data for Ranger's memory layout.
+- `ranger.mk` This is the base Makefile required to be included in all Ranger project Makefile's.
 
 ### Makefile
 
@@ -100,13 +100,13 @@ Example projects with Makefile's can be in the `sw/examples` directory.
 These each include a minimal Makefile.
 
 ```makefile
-SARATOGA_HOME = ../../..
+RANGER_HOME = ../../..
 
-include $(SARATOGA_HOME)/sw/common/saratoga.mk
+include $(RANGER_HOME)/sw/common/ranger.mk
 ```
 
-The first line sets the `SARATOGA_HOME` variable to three directories above the current directory.
-The next line includes the saratoga platform Makefile required by all projects.
+The first line sets the `RANGER_HOME` variable to three directories above the current directory.
+The next line includes the ranger platform Makefile required by all projects.
 
 The project is build by running the following command in the project directory.
 

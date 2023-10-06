@@ -1,9 +1,9 @@
 `timescale 1ns/1ps
 
 `include "rv32.sv"
-`include "saratoga.sv"
+`include "ranger.sv"
 `include "axi4_lite.sv"
-import saratoga::*;
+import ranger::*;
 
 
 module axi4_lite_manager_TB;

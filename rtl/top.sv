@@ -1,4 +1,4 @@
-//depend saratoga_soc.sv
+//depend ranger_soc.sv
 //depend core.sv
 //depend core/*.sv
 //depend mem/rom.sv
@@ -9,7 +9,7 @@
 `timescale 1ns/1ps
 
 
-// Top module for implementing Saratoga CPU on the Digilent Basys3
+// Top module for implementing Ranger CPU on the Digilent Basys3
 module top (
 
     // Clock signal
@@ -74,7 +74,7 @@ module top (
     assign gpioc[15] = btnD;
 
 
-    saratoga_soc #(
+    ranger_soc #(
         .CLK_PERIOD(20.0)
     ) cpu (
         .clk(core_clk),

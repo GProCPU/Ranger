@@ -8,12 +8,12 @@
 `timescale 1ns/1ps
 
 `include "rv32.sv"
-`include "saratoga.sv"
+`include "ranger.sv"
 `include "axi4_lite.sv"
-import saratoga::*;
+import ranger::*;
 
 
-module saratoga_soc #(
+module ranger_soc #(
         parameter CLK_PERIOD    = DEFAULT_CLK_PERIOD    // system clock period in ns
     ) (
         input  logic clk,                       // system clock

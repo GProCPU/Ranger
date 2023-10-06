@@ -4,19 +4,19 @@ OUTPUT_ARCH(riscv)
 ENTRY(_start)
 
 
-__Saratoga_rom_size = 4K;
-__Saratoga_ram_size = 4K;
+__Ranger_rom_size = 4K;
+__Ranger_ram_size = 4K;
 
-__Saratoga_rom_base = 0x00000000;
-__Saratoga_ram_base = 0x40000000;
+__Ranger_rom_base = 0x00000000;
+__Ranger_ram_base = 0x40000000;
 
-__Saratoga_heap_size = DEFINED(__Saratoga_heap_size) ? __Saratoga_heap_size : 0;
+__Ranger_heap_size = DEFINED(__Ranger_heap_size) ? __Ranger_heap_size : 0;
 
 
 MEMORY
 {
-    rom (rx) : ORIGIN = __Saratoga_rom_base, LENGTH = __Saratoga_rom_size
-    ram (rw) : ORIGIN = __Saratoga_ram_base, LENGTH = __Saratoga_ram_size
+    rom (rx) : ORIGIN = __Ranger_rom_base, LENGTH = __Ranger_rom_size
+    ram (rw) : ORIGIN = __Ranger_ram_base, LENGTH = __Ranger_ram_size
 }
 
 
@@ -43,7 +43,7 @@ SECTIONS
         PROVIDE_HIDDEN(__fini_array_end = .);
 
         /* Include build ID */
-        PROVIDE(__Saratoga_build_id_addr = .);
+        PROVIDE(__Ranger_build_id_addr = .);
         KEEP(*(.note.gnu.build-id))
 
         /* finish section on word boundary */
@@ -78,7 +78,7 @@ SECTIONS
     .heap : ALIGN(4)
     {
         PROVIDE(__heap_start = .);
-        . = __Saratoga_heap_size;
+        . = __Ranger_heap_size;
         /* finish section on word boundary */
         . = ALIGN(4);
         PROVIDE(__head_end = .);
@@ -87,13 +87,13 @@ SECTIONS
 }
 
 
-/* Export symbols for startup_Saratoga.S */
-PROVIDE(__Saratoga_imem_begin              = ORIGIN(rom));
-PROVIDE(__Saratoga_dmem_begin              = ORIGIN(ram));
-PROVIDE(__Saratoga_stack_begin             = (ORIGIN(ram) + LENGTH(ram)) - 4);
-PROVIDE(__Saratoga_bss_start               = __bss_start);
-PROVIDE(__Saratoga_bss_end                 = __bss_end);
-PROVIDE(__Saratoga_copy_data_src_begin     = LOADADDR(.data));
-PROVIDE(__Saratoga_copy_data_dest_begin    = __data_start);
-PROVIDE(__Saratoga_copy_data_dest_end      = __data_end);
-PROVIDE(__Saratoga_heap_size               = __Saratoga_heap_size);
+/* Export symbols for startup_Ranger.S */
+PROVIDE(__Ranger_imem_begin              = ORIGIN(rom));
+PROVIDE(__Ranger_dmem_begin              = ORIGIN(ram));
+PROVIDE(__Ranger_stack_begin             = (ORIGIN(ram) + LENGTH(ram)) - 4);
+PROVIDE(__Ranger_bss_start               = __bss_start);
+PROVIDE(__Ranger_bss_end                 = __bss_end);
+PROVIDE(__Ranger_copy_data_src_begin     = LOADADDR(.data));
+PROVIDE(__Ranger_copy_data_dest_begin    = __data_start);
+PROVIDE(__Ranger_copy_data_dest_end      = __data_end);
+PROVIDE(__Ranger_heap_size               = __Ranger_heap_size);

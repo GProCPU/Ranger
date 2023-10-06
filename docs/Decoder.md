@@ -217,7 +217,7 @@ Memory addresses are calculated using the ALU by adding the base value register 
 The data width is encoded in the funct3 `width` field as shown in Table 3.
 
 The address space is byte-addressed and little-endian (can be changed to big-endian using the [`mstatus` CSR](./CSR.md#machine-status-register-mstatus-and-mstatush)).
-See the [memory map](./Saratoga.md#memory-map) for address space mapping and access permissions.
+See the [memory map](./Ranger.md#memory-map) for address space mapping and access permissions.
 
 There are five load instructions that read data from the calculated memory address to the destination register `dest`.
 There is the 32-bit word (`LW`), 16-bit half-word (`LH`), and 8-bit byte (`LB`) load instructions.

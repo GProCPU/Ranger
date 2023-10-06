@@ -17,7 +17,7 @@ The following are optional features of the core that can be disabled via paramet
 - AXI: AXI bus address space can be omitted
 
 ![](./figures/Core_BlockDiagram.drawio.svg) \
-**Figure 1.** GPro Saratoga minimal core implementation
+**Figure 1.** GPro Ranger minimal core implementation
 
 ## Ports
 

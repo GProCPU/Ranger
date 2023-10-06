@@ -5,8 +5,8 @@
 `timescale 1ns/1ps
 
 `include "rv32.sv"
-`include "saratoga.sv"
-import saratoga::*;
+`include "ranger.sv"
+import ranger::*;
 
 
 module core_TB;

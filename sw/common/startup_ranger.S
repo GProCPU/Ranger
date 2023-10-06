@@ -1,5 +1,5 @@
 
-.file "startup_saratoga.S"
+.file "startup_ranger.S"
 .section .text.startup
 .balign 4
 .global _start
@@ -25,15 +25,15 @@ __startup_csr_init:
 __startup_pointer_init:
     .option push
     .option norelax
-    la      sp, __Saratoga_stack_begin  // stack pointer
+    la      sp, __Ranger_stack_begin  // stack pointer
     .option pop
 
 
 // Copy initialized data from ROM to RAM
 __startup_copy_data:
-    la      x11, __Saratoga_copy_data_src_begin
-    la      x12, __Saratoga_copy_data_dest_begin
-    la      x13, __Saratoga_copy_data_dest_end
+    la      x11, __Ranger_copy_data_src_begin
+    la      x12, __Ranger_copy_data_dest_begin
+    la      x13, __Ranger_copy_data_dest_end
     beq     x11, x12, __startup_copy_data_loop_end  // do nothing if source and destination are same
 __startup_copy_data_loop:
     bge     x12, x13, __startup_copy_data_loop_end
@@ -47,8 +47,8 @@ __startup_copy_data_loop_end:
 
 // Clear .bss sections
 __startup_clear_bss:
-    la      x14, __Saratoga_bss_start
-    la      x15, __Saratoga_bss_end
+    la      x14, __Ranger_bss_start
+    la      x15, __Ranger_bss_end
 __startup_clear_bss_loop:
     bge     x14, x15, __startup_clear_bss_loop_end
     sw      zero, 0(x14)

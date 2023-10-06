@@ -88,7 +88,7 @@ Figure 1 shows the field encoding
 **Figure 1.** Field encoding for `misa`
 
 The two-bit `MXL` field encodes the native base integer ISA width as shown in Table 1.
-The value of `MXL` is 1 for the 32-bit GPro 2 (Saratoga).
+The value of `MXL` is 1 for the 32-bit GPro 2 (Ranger).
 
 **Table 1.** MXL bit field encoding
 
@@ -131,7 +131,7 @@ This implementation returns 0x1, indicating the first iteration of the GPro CPU.
 *0xF14*
 
 This read-only register encodes the execution environment unique, integer ID of the hardware thread.
-This implementation returns 0x0 as Saratoga only supports a single hardware thread.
+This implementation returns 0x0 as Ranger only supports a single hardware thread.
 
 
 ### Machine Status Register `mstatus` and `mstatush`

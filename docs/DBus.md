@@ -61,7 +61,7 @@ It is purely combinatorial logic.
 
 ## Behavior
 
-Addresses are decoded according to the [memory map](./Saratoga.md#memory-map), then transactions are routed to the appropriate device.
+Addresses are decoded according to the [memory map](./Ranger.md#memory-map), then transactions are routed to the appropriate device.
 Output addresses are hardwired to the appropriate input address bits.
 The read/write enable signals are controlled by a memory map address decoder.
 
