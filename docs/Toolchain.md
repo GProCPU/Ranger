@@ -82,7 +82,7 @@ It will print something like `/opt/riscv/bin/riscv64-unknown-elf-gcc` if it was 
 
 ## Building a Project
 
-Compiling for the GPro 2 (Ranger) requires the either a new version of gcc with support for RISC-V or the previous installation step to be completed.
+Compiling for the GPro 3 (Ranger) requires the either a new version of gcc with support for RISC-V or the previous installation step to be completed.
 After the toolchain has been installed, projects can be compiled using a Makefile.
 
 ### Platform Files

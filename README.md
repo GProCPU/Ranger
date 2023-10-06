@@ -1,15 +1,13 @@
-# GPro 2 (Ranger) RISC-V CPU
+# GPro 3 (Ranger) RISC-V CPU
 
-![Status](https://img.shields.io/badge/status-initial_design-blue)
+![Status](https://img.shields.io/badge/status-planned-blue)
 <!-- ![Sim](https://img.shields.io/badge/simulation-passing-green) -->
 <!-- ![FPGA](https://img.shields.io/badge/FPGA-failing-red) -->
 
 
-The GPro 2 (Ranger) is the second generation of RISC-V processors designed by
-[Gerber Prototyping](https://g-proto.com). Intended both FPGA implementation and
-physical design. Ranger adds a 5-stage pipeline to the previous generation
-GPro 1 (Lexington). This processor is currently in the initial design phase as
-the focus of a Graduate Independent Study course.
+The GPro 3 (Ranger) is the third generation of RISC-V processors designed by
+[Gerber Prototyping](https://g-proto.com).  Ranger is planned to add a 5-stage
+pipeline to previous generations. This processor planned for the future.
 
 ## Features
 

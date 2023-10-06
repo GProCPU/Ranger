@@ -88,7 +88,7 @@ Figure 1 shows the field encoding
 **Figure 1.** Field encoding for `misa`
 
 The two-bit `MXL` field encodes the native base integer ISA width as shown in Table 1.
-The value of `MXL` is 1 for the 32-bit GPro 2 (Ranger).
+The value of `MXL` is 1 for the 32-bit GPro 3 (Ranger).
 
 **Table 1.** MXL bit field encoding
 

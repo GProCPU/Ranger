@@ -2,12 +2,12 @@
 
 ## Design
 
-The GPro 2 (Ranger) is a 5-stage RISC-V RV32IM implementation.
+The GPro 3 (Ranger) is a 5-stage RISC-V RV32IM implementation.
 It features a read-only program memory and separate read/write data memory.
 Figure 1 shows a simplified diagram of the CPU core
 
 ![](./figures/Core_BlockDiagram.drawio.svg) \
-**Figure 1.** GPro 2 (Ranger) minimal core implementation
+**Figure 1.** GPro 3 (Ranger) minimal core implementation
 
 ## Behavior
 
@@ -32,7 +32,7 @@ Information about programming the device is found in the [Toolchain](./Toolchain
 A full diagram of the SoC (minus peripherals) is shown in Figure 2.
 
 ![](./figures/BlockDiagram.drawio.svg) \
-**Figure 2.** GPro 2 (Ranger) SoC
+**Figure 2.** GPro 3 (Ranger) SoC
 
 ### Memory Map
 
